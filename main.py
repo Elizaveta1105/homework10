@@ -2,6 +2,7 @@ from collections import UserDict
 
 
 class Field:
+
     def __init__(self, value):
         if self.is_valid(value):
             self.value = value
@@ -20,6 +21,7 @@ class Name(Field):
 
 
 class Phone(Field):
+
     def is_valid(self, value):
         if value.isdigit() and len(value) == 10:
             return True
